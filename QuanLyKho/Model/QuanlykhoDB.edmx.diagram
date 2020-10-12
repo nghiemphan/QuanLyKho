@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="a9981f7bd9d3424882d3d94bee474809" Name="Diagram1">
+        <EntityTypeShape EntityType="QuanLyKhoModel.Customer" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKhoModel.Input" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKhoModel.InputInfo" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKhoModel.Object" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKhoModel.Output" Width="1.5" PointX="5.25" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKhoModel.OutputInfo" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKhoModel.Suplier" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKhoModel.sysdiagram" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKhoModel.Unit" Width="1.5" PointX="0.75" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKhoModel.UserRole" Width="1.5" PointX="7.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKhoModel.User" Width="1.5" PointX="10" PointY="4.875" IsExpanded="true" />
+        <AssociationConnector Association="QuanLyKhoModel.FK__OutputInf__IdCus__2A4B4B5E" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKhoModel.FK__InputInfo__IdInp__239E4DCF" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKhoModel.FK__InputInfo__Statu__22AA2996" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKhoModel.FK__OutputInf__IdInp__29572725" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKhoModel.FK__Object__BarCode__164452B1" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKhoModel.FK__Object__IdSuplie__173876EA" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKhoModel.FK__OutputInf__Statu__286302EC" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKhoModel.FK__OutputInfo__Id__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKhoModel.FK__Users__IdRole__1BFD2C07" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

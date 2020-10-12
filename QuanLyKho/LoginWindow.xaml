@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QuanLyKho"
         mc:Ignorable="d"
-        
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         xmlns:uc="clr-namespace:QuanLyKho.UserControls"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -15,10 +15,13 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
         FontFamily="{DynamicResource MaterialDesignFont}"
+        
+        DataContext="{StaticResource LoginVM}"
         ResizeMode="NoResize"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
         Name="loginWindow"
+       
         Title="Đăng nhập" Height="300" Width="400">
     <Grid>
         <Grid.RowDefinitions>
@@ -42,6 +45,7 @@
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
                     <TextBox materialDesign:HintAssist.Hint="Tên đăng nhập"
+                        Text="{Binding UserName}"
                         Style="{StaticResource MaterialDesignFloatingHintTextBox}" VerticalAlignment="Center" />
                 </Grid>
                 <Grid Grid.Row="1">
@@ -49,14 +53,20 @@
                           materialDesign:HintAssist.Hint="Mật khẩu"
                           materialDesign:HintAssist.Foreground="Green"
                           materialDesign:TextFieldAssist.UnderlineBrush="Green"
-                          Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" /> 
+                          Style="{StaticResource MaterialDesignFloatingHintPasswordBox}">
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="PasswordChanged">
+                                <i:InvokeCommandAction Command="{Binding PassWordCommand}" CommandParameter="{Binding ElementName=FloatingPasswordBox}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </PasswordBox>
                 </Grid>
                 <Grid Grid.Row="2">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition></ColumnDefinition>
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.Column="0" Style="{StaticResource MaterialDesignRaisedAccentButton}" Width="110"                            
+                    <Button Command="{Binding LoginCommand}" CommandParameter="{Binding ElementName = loginWindow}" Grid.Column="0" Style="{StaticResource MaterialDesignRaisedAccentButton}" Width="110"                            
                             ToolTip="Đăng nhập" Content="Đăng nhập"></Button>
                     <Button Grid.Column="1"
                             Style="{StaticResource MaterialDesignRaisedDarkButton}" Width="110"
